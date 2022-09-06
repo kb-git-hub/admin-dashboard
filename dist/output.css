@@ -601,6 +601,10 @@ video {
   min-width: 1000px;
 }
 
+.min-w-\[450px\] {
+  min-width: 450px;
+}
+
 .grid-cols-contentContainer {
   grid-template-columns: 1fr 5fr 2fr;
 }
@@ -619,4 +623,9 @@ video {
 
 .justify-center {
   justify-content: center;
+}
+
+.bg-slate-900 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(15 23 42 / var(--tw-bg-opacity));
 }
