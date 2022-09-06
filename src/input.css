@@ -1,3 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+    .layoutBorder {
+        @apply border-rose-500 border-2;
+    }
+}
