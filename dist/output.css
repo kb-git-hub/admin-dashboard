@@ -577,6 +577,75 @@ video {
   grid-row: span 5 / span 5;
 }
 
+.row-auto {
+  grid-row: auto;
+}
+
+.row-span-6 {
+  grid-row: span 6 / span 6;
+}
+
+.row-start-3 {
+  grid-row-start: 3;
+}
+
+.row-start-2 {
+  grid-row-start: 2;
+}
+
+.row-start-4 {
+  grid-row-start: 4;
+}
+
+.row-start-5 {
+  grid-row-start: 5;
+}
+
+.row-end-auto {
+  grid-row-end: auto;
+}
+
+.row-end-7 {
+  grid-row-end: 7;
+}
+
+.row-end-\[-1\] {
+  grid-row-end: -1;
+}
+
+.m-2 {
+  margin: 0.5rem;
+}
+
+.m-4 {
+  margin: 1rem;
+}
+
+.my-2 {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.ml-2 {
+  margin-left: 0.5rem;
+}
+
+.ml-3 {
+  margin-left: 0.75rem;
+}
+
+.ml-5 {
+  margin-left: 1.25rem;
+}
+
+.ml-4 {
+  margin-left: 1rem;
+}
+
+.flex {
+  display: flex;
+}
+
 .grid {
   display: grid;
 }
@@ -587,6 +656,26 @@ video {
 
 .h-\[85vh\] {
   height: 85vh;
+}
+
+.h-10 {
+  height: 2.5rem;
+}
+
+.h-14 {
+  height: 3.5rem;
+}
+
+.h-12 {
+  height: 3rem;
+}
+
+.h-8 {
+  height: 2rem;
+}
+
+.h-1 {
+  height: 0.25rem;
 }
 
 .min-h-\[450px\] {
@@ -605,8 +694,16 @@ video {
   min-width: 450px;
 }
 
+.flex-grow {
+  flex-grow: 1;
+}
+
 .grid-cols-contentContainer {
   grid-template-columns: 1fr 5fr 2fr;
+}
+
+.grid-cols-3 {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
 .grid-rows-6 {
@@ -617,15 +714,94 @@ video {
   grid-template-rows: repeat(9, minmax(0, 1fr));
 }
 
+.grid-rows-\[7\] {
+  grid-template-rows: 7;
+}
+
+.grid-rows-\[8\] {
+  grid-template-rows: 8;
+}
+
+.grid-rows-3 {
+  grid-template-rows: repeat(3, minmax(0, 1fr));
+}
+
+.grid-rows-2 {
+  grid-template-rows: repeat(2, minmax(0, 1fr));
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
 .content-center {
   align-content: center;
+}
+
+.content-end {
+  align-content: flex-end;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.justify-end {
+  justify-content: flex-end;
 }
 
 .justify-center {
   justify-content: center;
 }
 
+.gap-4 {
+  gap: 1rem;
+}
+
+.border-2 {
+  border-width: 2px;
+}
+
+.border-green-500 {
+  --tw-border-opacity: 1;
+  border-color: rgb(34 197 94 / var(--tw-border-opacity));
+}
+
 .bg-slate-900 {
   --tw-bg-opacity: 1;
   background-color: rgb(15 23 42 / var(--tw-bg-opacity));
+}
+
+.p-4 {
+  padding: 1rem;
+}
+
+.px-3 {
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+}
+
+.px-5 {
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-end {
+  text-align: end;
+}
+
+.align-middle {
+  vertical-align: middle;
+}
+
+.align-text-top {
+  vertical-align: text-top;
+}
+
+.align-text-bottom {
+  vertical-align: text-bottom;
 }

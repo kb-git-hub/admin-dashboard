@@ -37,16 +37,52 @@ h-screen
                 <div class="support">Support</div>
             </div>
         </div>
-        <div class="dashMainContent grid grid-rows-main">
-            <div class="summary layoutBorder ">Summary</div>
-            <div class="flightLog layoutBorder ">FlightLog</div>
-            <div class="flightContentMain layoutBorder row-span-4">Flight Content</div>
+
+
+        <div class="dashMainContent row-span-1 grid grid-rows-main layoutBorder">
+            <div class="summary layoutBorder flex justify-center items-center">Summary</div>
+            <div class="flightLog layoutBorder 
+            flex gap-4 ml-4
+            ">
+                <div class=" p-4 flex justify-center items-center my-2 systems layoutBorder">ALL SYSTEMS CHECK</div>
+                <div class=" p-4 flex justify-center items-center my-2 thermalShield layoutBorder">THERMAL SHIELD</div>
+                <div class=" p-4 flex justify-center items-center my-2 power layoutBorder">POWER COMPLETION</div>
+
+
+            </div>
+
+            <div class="flightContentMain layoutBorder row-span-4
+            grid grid-cols-3 grid-rows-2 gap-4  m-4
+            ">
+                <div class="overview layoutBorder">Overview</div>
+                <div class="life layoutBorder">Life</div>
+                <div class="comms layoutBorder">Comms</div>
+                <div class="prop layoutBorder">Prop</div>
+                <div class="mech layoutBorder">Mech</div>
+                <div class="power layoutBorder">Power</div>
+            
+
+
+            </div>
             <div class="progressUpdates layoutBorder row-span-3">Progress</div>
         </div>
 
-        <div class="dashRightContent grid grid-rows-6">
+
+        <div class="dashRightContent grid grid-rows-main">
             <div class="user layoutBorder row-span-1">User</div>
-            <div class="flightDetails layoutBorder row-span-5">Flight Details</div>
+            <div class="flightDetails border-2 border-green-500  row-start-2 row-end-[-1]
+            flex flex-col
+            m-4
+            
+        
+
+            ">
+
+                <div class="flightNumber layoutBorder h-14 ">Flight Number</div>
+                <div class="flightItinerary layoutBorder flex-grow">Flight Itinerary</div>
+                <div class="flightMetrics layoutBorder flex-grow">Flight Metrics</div>
+
+            </div>
 
         </div>
     </div>
