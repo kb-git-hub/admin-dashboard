@@ -11,24 +11,44 @@
 
 <body class=" grid justify-center content-center
 h-screen
-
 ">
-
-    
     <!-- <div class="webGLContainer"></div> -->
     <div class="contentContainer
-    w-[85vw] h-[85vh]
+    w-[85vw] h-[85vh] min-h-[450px] min-w-[1000px]
     grid grid-cols-contentContainer
     layoutBorder
-
-
- 
-
     ">
+        <div class="dashLeftLinks layoutBorder
+        grid grid-rows-6
+        ">
 
-        <div class="dashLeftLinks layoutBorder">Left</div>
-        <div class="dashMainContent layoutBorder">Main</div>
-        <div class="dashRightContent layoutBorder">Right</div>
+            <div class="logo layoutBorder row-span-1">XBoard</div>
+
+            <div class="main  layoutBorder row-span-2">
+                <div class="dashboard">Dashboard</div>
+                <div class="profile">profile</div>
+                <div class="messages">messages</div>
+                <div class="flightDuties">Flight Duties</div>
+                <div class="org">Organization</div>
+            </div>
+
+            <div class="help layoutBorder">
+                <div class="settings">Settings</div>
+                <div class="support">Support</div>
+            </div>
+        </div>
+        <div class="dashMainContent grid grid-rows-main">
+            <div class="summary layoutBorder ">Summary</div>
+            <div class="flightLog layoutBorder ">FlightLog</div>
+            <div class="flightContentMain layoutBorder row-span-4">Flight Content</div>
+            <div class="progressUpdates layoutBorder row-span-3">Progress</div>
+        </div>
+
+        <div class="dashRightContent grid grid-rows-6">
+            <div class="user layoutBorder row-span-1">User</div>
+            <div class="flightDetails layoutBorder row-span-5">Flight Details</div>
+
+        </div>
     </div>
 
 

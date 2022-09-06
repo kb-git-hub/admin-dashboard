@@ -5,11 +5,12 @@ module.exports = {
     extend: {
       gridTemplateColumns: {
         // Simple 16 column grid
-        'contentContainer': '1fr 4fr 2fr',
-
-      }
-
-
+        'contentContainer': '1fr 5fr 2fr',
+      },
+      gridTemplateRows: {
+        // Simple 8 row grid
+        'main': 'repeat(9, minmax(0, 1fr))',
+      },
     },
   },
   plugins: [],
