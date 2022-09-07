@@ -7,3 +7,9 @@
         @apply border-rose-500 border-2;
     }
 }
+
+@layer components {
+    .itineraryCards {
+        @apply h-fit m-2 p-2 rounded-md;
+    }
+}

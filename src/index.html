@@ -14,7 +14,7 @@ h-screen
 ">
     <!-- <div class="webGLContainer"></div> -->
     <div class="contentContainer
-    w-[85vw] h-[85vh] min-h-[865px] min-w-[1000px]
+    w-[75vw] h-[80vh] min-h-[745px] min-w-[1240px]
     grid grid-cols-contentContainer
     layoutBorder
     ">
@@ -22,8 +22,12 @@ h-screen
         grid grid-rows-6
         ">
 
-        
-            <div class="logo layoutBorder row-span-1">XBoard</div>
+
+            <div class="logo layoutBorder row-span-1 flex items-center ">
+                <img class="object-scale-down h-16" src="/static/x2.png">
+                <div class="mt-10">UI</div>
+
+            </div>
 
             <div class="main  layoutBorder row-span-2">
                 <div class="dashboard">Dashboard</div>
@@ -41,14 +45,13 @@ h-screen
 
 
         <div class="dashMainContent row-span-1 grid grid-rows-main layoutBorder">
-            <div class="summary layoutBorder flex justify-center items-center">Summary</div>
+            <div class="summary layoutBorder flex items-center">Summary</div>
             <div class="flightLog layoutBorder 
             flex gap-4 ml-4
             ">
                 <div class=" p-4 flex justify-center items-center my-2 systems layoutBorder">ALL SYSTEMS CHECK</div>
                 <div class=" p-4 flex justify-center items-center my-2 thermalShield layoutBorder">THERMAL SHIELD</div>
                 <div class=" p-4 flex justify-center items-center my-2 power layoutBorder">POWER COMPLETION</div>
-
 
             </div>
 
@@ -61,8 +64,6 @@ h-screen
                 <div class="prop layoutBorder">Prop</div>
                 <div class="mech layoutBorder">Mech</div>
                 <div class="power layoutBorder">Power</div>
-            
-
 
             </div>
             <div class="progressUpdates layoutBorder row-span-3">Progress</div>
@@ -71,17 +72,75 @@ h-screen
 
         <div class="dashRightContent grid grid-rows-main">
             <div class="user layoutBorder row-span-1">User</div>
-            <div class="flightDetails border-2 border-green-500  row-start-2 row-end-[-1]
-            flex flex-col
-            m-4
-            
-        
-
+            <div class="flightDetails border-2  row-start-2 row-end-[-1]
+            flex flex-col min-w-[280px] layoutBorder
+            m-3
             ">
 
-                <div class="flightNumber layoutBorder h-14 ">Flight Number</div>
-                <div class="flightItinerary layoutBorder flex-grow">Flight Itinerary</div>
-                <div class="flightMetrics layoutBorder flex-grow">Flight Metrics</div>
+                <div class="flightNumber layoutBorder h-14 ml-3 ">
+                    <div>Flight Number</div>
+                    <div>D96024</div>
+                </div>
+                <div class="flightItinerary layoutBorder grow
+                grid grid-cols-2
+                ">
+                    <div class="layoutBorder itineraryCards">
+                        <div>Launch Loc</div>
+                        <div>Earth</div>
+                    </div>
+                    <div class="layoutBorder itineraryCards">
+                        <div>Dest Loc</div>
+                        <div>Mars</div>
+                    </div>
+                    <div class="layoutBorder itineraryCards">
+                        <div>Launch Date</div>
+                        <div>06-22-2340</div>
+                    </div>
+                    <div class="layoutBorder itineraryCards">
+                        <div>Landing Date</div>
+                        <div>08-22-2340</div>
+                    </div>
+                    <div class="layoutBorder itineraryCards">
+                        <div>Seat</div>
+                        <div>001-a-6</div>
+                    </div>
+                    <div class="layoutBorder itineraryCards">
+                        <div>Purpose</div>
+                        <div>Exploration</div>
+                    </div>
+                </div>
+
+
+                <div class="flightMetrics layoutBorder grow-[4] flex flex-col justify-around">
+                    <div class="layoutBorder">
+                        <div>Inertial Velocity</div>
+                        <div class="flex justify-between">
+                            <div>RangeBar</div>
+                            <div>7.68 km/s</div>
+                        </div>
+                    </div>
+                    <div class="layoutBorder">
+                        <div>Altitude</div>
+                        <div class="flex justify-between">
+                            <div>RangeBar</div>
+                            <div>390 km</div>
+                        </div>
+                    </div>
+                    <div class="layoutBorder">
+                        <div>Inclination</div>
+                        <div class="flex justify-between">
+                            <div>Range bar</div>
+                            <div>51.67 deg</div>
+                        </div>
+                    </div>
+                    <div class="layoutBorder">
+                        <div>Range to Dest.</div>
+                        <div class="flex justify-between">
+                            <div>RangeBar</div>
+                            <div>1.02 km</div>
+                        </div>
+                    </div>
+                </div>
 
             </div>
 
