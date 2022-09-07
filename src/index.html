@@ -7,16 +7,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="/dist/output.css" rel="stylesheet">
     <title>Document</title>
+
+    <!-- npx tailwindcss -i ./src/input.css -o ./dist/output.css --watch -->
 </head>
 
-<body class=" grid justify-center content-center
-h-screen
+<body class=" grid 
+h-screen w-screen
+
 ">
     <!-- <div class="webGLContainer"></div> -->
-    <div class="contentContainer
+    <div class="contentContainer  
+    col-start-2 col-end-3
+    row-start-2 row-end-3
     w-[75vw] h-[80vh] min-h-[745px] min-w-[1240px]
     grid grid-cols-contentContainer
     layoutBorder
+    
     ">
         <div class="dashLeftLinks layoutBorder
         grid grid-rows-6
