@@ -27,25 +27,43 @@ h-screen w-screen
         <div class="dashLeftLinks layoutBorder
         grid grid-rows-6
         ">
-
-
-            <div class="logo layoutBorder row-span-1 flex items-center ">
-                <img class="object-scale-down h-16" src="/static/x2.png">
-                <div class="mt-10">UI</div>
+            <div class="logo layoutBorder row-span-1 flex items-center justify-center ">
+                <img class="object-scale-down h-[5.5rem] mr-4" src="/static/x2.png">
+                <div class="mt-10"></div>
 
             </div>
 
-            <div class="main  layoutBorder row-span-2">
-                <div class="dashboard">Dashboard</div>
-                <div class="profile">profile</div>
-                <div class="messages">messages</div>
-                <div class="flightDuties">Flight Duties</div>
-                <div class="org">Organization</div>
+            <div class="main  layoutBorder row-span-2 flex flex-col justify-evenly">
+                <div class="dashboard flex">
+                    <div class="layoutBorder text-end grow mr-4 ml-4">Dashboard</div>
+                    <div class="layoutBorder justify-self-end mr-4">img</div>
+                </div>
+
+                <div class="dashboard flex">
+                    <div class="layoutBorder  text-end grow mr-4 ml-4">Profile</div>
+                    <div class="layoutBorder justify-self-end mr-4">img</div>
+                </div>
+
+                <div class="dashboard flex">
+                    <div class="layoutBorder  text-end grow mr-4 ml-4">Messages</div>
+                    <div class="layoutBorder justify-self-end mr-4">img</div>
+                </div>
+
+                <div class="dashboard flex">
+                    <div class="layoutBorder  text-end grow mr-4 ml-4">Flight Duties</div>
+                    <div class="layoutBorder justify-self-end mr-4">img</div>
+                </div>
+
+                <div class="dashboard flex">
+                    <div class="layoutBorder  text-end grow mr-4 ml-4">Organization</div>
+                    <div class="layoutBorder justify-self-end mr-4">img</div>
+                </div>
+
             </div>
 
             <div class="help layoutBorder">
-                <div class="settings">Settings</div>
-                <div class="support">Support</div>
+                <div class="settings itineraryCards layoutBorder">Settings</div>
+                <div class="support itineraryCards layoutBorder">Support</div>
             </div>
         </div>
 
@@ -72,17 +90,60 @@ h-screen w-screen
                 <div class="power layoutBorder">Power</div>
 
             </div>
-            <div class="progressUpdates layoutBorder row-span-3">Progress</div>
+            <div class="progressUpdates layoutBorder row-span-3 
+            flex justify-around items-center">
+                <div class="layoutBorder flex items-center justify-center h-[160px] w-[160px]">
+                    <div class="border-emerald-500 border-2 rounded-full 
+                    h-32 w-32 flex flex-col justify-center items-center">
+                        <div>PP02</div>
+                        <div>2.69</div>
+                        <div>psia</div>
+                    </div>
+                </div>
+
+                <div class="layoutBorder flex items-center justify-center h-[160px] w-[160px]">
+                    <div class="border-emerald-500 border-2 rounded-full 
+                    h-32 w-32 flex flex-col justify-center items-center">
+                        <div>PP02</div>
+                        <div>2.69</div>
+                        <div>psia</div>
+                    </div>
+                </div>
+
+                <div class="layoutBorder flex items-center justify-center h-[160px] w-[160px]">
+                    <div class="border-emerald-500 border-2 rounded-full 
+                    h-32 w-32 flex flex-col justify-center items-center">
+                        <div>PP02</div>
+                        <div>2.69</div>
+                        <div>psia</div>
+                    </div>
+                </div>
+
+            </div>
         </div>
 
 
         <div class="dashRightContent grid grid-rows-main">
-            <div class="user layoutBorder row-span-1">User</div>
+            <div class="user layoutBorder row-span-1 flex items-center justify-between">
+
+                <div class=" ml-4 flex justify-around items-center gap-2">
+                    <div class="border-emerald-500 border-2 rounded-full h-14 w-14 flex justify-center items-center">
+                        <div>photo</div>
+                    </div>
+                    <div>Hopper Copper</div>
+                </div>
+                <div class=" mr-4 flex justify-around items-center gap-2">
+                    <div>img</div>
+                    <div>...</div>
+                </div>
+
+
+            </div>
+
             <div class="flightDetails border-2  row-start-2 row-end-[-1]
             flex flex-col min-w-[280px] layoutBorder
             m-3
             ">
-
                 <div class="flightNumber layoutBorder h-14 ml-3 ">
                     <div>Flight Number</div>
                     <div>D96024</div>
