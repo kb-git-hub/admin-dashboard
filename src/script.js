@@ -15,11 +15,6 @@ addEventListener('click', () => {
 
 
 
-
-
-
-
-
 function animate() {
     requestAnimationFrame(animate)
 
