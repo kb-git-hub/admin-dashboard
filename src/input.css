@@ -2,6 +2,19 @@
 @tailwind components;
 @tailwind utilities;
 
+
+
+
+*{
+    font-family: 'Roboto', sans-serif;  
+    color: whitesmoke;
+}
+
+body{
+    -webkit-font-smoothing: antialiased ;
+}
+
+
 @layer components {
     .layoutBorder {
         @apply border-rose-500 border-2;
@@ -10,6 +23,6 @@
 
 @layer components {
     .itineraryCards {
-        @apply h-fit m-2 p-2 rounded-md;
+        @apply h-fit m-2 p-2 rounded-md text-sm;
     }
 }

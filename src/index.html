@@ -5,14 +5,22 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    
     <link href="/dist/output.css" rel="stylesheet">
-    <title>Document</title>
+    <link type="image/png" sizes="16x16" rel="icon" href="/static/xFavicon.png">
+    <script src="script.js" defer></script>
+    <title>Launch Portal</title>
 
     <!-- npx tailwindcss -i ./src/input.css -o ./dist/output.css --watch -->
 </head>
 
 <body class=" grid relative
 h-screen w-screen
+bg-gradient-to-r from-slate-900 via-slate-600 to-slate-900
 ">
     <div class="contentContainer  
     col-start-2 col-end-3
@@ -20,7 +28,7 @@ h-screen w-screen
     w-[75vw] h-[80vh] min-h-[745px] min-w-[1240px]
     grid grid-cols-contentContainer
     layoutBorder
-    ">
+    "> 
         <div class="dashLeftLinks layoutBorder
         grid grid-rows-6
         ">
@@ -65,7 +73,7 @@ h-screen w-screen
         </div>
 
         <div class="dashMainContent row-span-1 grid grid-rows-main layoutBorder">
-            <div class="summary layoutBorder flex items-center">Summary</div>
+            <div class="summary layoutBorder flex items-center ">Summary</div>
             <div class="flightLog layoutBorder 
             flex gap-4 ml-4
             ">
@@ -144,36 +152,37 @@ h-screen w-screen
                 ">
                     <div class="layoutBorder itineraryCards">
                         <div>Launch Loc</div>
-                        <div>Earth</div>
+                        <div class=" mt-1">Earth</div>
                     </div>
                     <div class="layoutBorder itineraryCards">
                         <div>Dest Loc</div>
-                        <div>Mars</div>
+                        <div class=" mt-1">Mars</div>
                     </div>
                     <div class="layoutBorder itineraryCards">
                         <div>Launch Date</div>
-                        <div>06-22-2340</div>
+                        <div class=" mt-1">06-22-2340</div>
                     </div>
                     <div class="layoutBorder itineraryCards">
                         <div>Landing Date</div>
-                        <div>08-22-2340</div>
+                        <div class=" mt-1">08-22-2340</div>
                     </div>
                     <div class="layoutBorder itineraryCards">
                         <div>Seat</div>
-                        <div>001-a-6</div>
+                        <div class=" mt-1">001-a-6</div>
                     </div>
                     <div class="layoutBorder itineraryCards">
                         <div>Purpose</div>
-                        <div>Exploration</div>
+                        <div class="text-sm mt-1">Exploration</div>
                     </div>
                 </div>
 
                 <div class="flightMetrics layoutBorder grow-[4] flex flex-col justify-around">
                     <div class="layoutBorder">
                         <div>Inertial Velocity</div>
-                        <div class="flex justify-between">
-                            <div>RangeBar</div>
-                            <div>7.68 km/s</div>
+                        <div class="flex justify-between items-center">
+                            <div id="inertialVelocity" 
+                            class="layoutBorder w-[100%] h-[10px] mr-2 bg-slate-500 rounded-md"></div>
+                            <div class="layoutBorder shrink-0">10 km/s</div>
                         </div>
                     </div>
                     <div class="layoutBorder">
