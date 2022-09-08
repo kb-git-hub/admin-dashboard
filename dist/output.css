@@ -554,7 +554,7 @@ video {
 .layoutBorder {
   border-width: 2px;
   --tw-border-opacity: 1;
-  border-color: rgb(244 63 94 / var(--tw-border-opacity));
+  border-color: rgb(16 185 129 / var(--tw-border-opacity));
 }
 
 .itineraryCards {
@@ -645,14 +645,6 @@ video {
   margin-right: 0.5rem;
 }
 
-.mr-3 {
-  margin-right: 0.75rem;
-}
-
-.mr-5 {
-  margin-right: 1.25rem;
-}
-
 .flex {
   display: flex;
 }
@@ -685,10 +677,6 @@ video {
   height: 3.5rem;
 }
 
-.h-2 {
-  height: 0.5rem;
-}
-
 .h-\[10px\] {
   height: 10px;
 }
@@ -715,10 +703,6 @@ video {
 
 .w-14 {
   width: 3.5rem;
-}
-
-.w-\[100\%s\] {
-  width: 100%s;
 }
 
 .w-\[100\%\] {
