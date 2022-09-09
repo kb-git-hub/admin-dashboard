@@ -781,6 +781,10 @@ video {
   width: 77%;
 }
 
+.w-\[70\%\] {
+  width: 70%;
+}
+
 .min-w-\[1240px\] {
   min-width: 1240px;
 }
@@ -928,6 +932,18 @@ video {
 .text-sm {
   font-size: 0.875rem;
   line-height: 1.25rem;
+}
+
+.outline-dotted {
+  outline-style: dotted;
+}
+
+.outline-2 {
+  outline-width: 2px;
+}
+
+.outline-green-300 {
+  outline-color: #86efac;
 }
 
 *{

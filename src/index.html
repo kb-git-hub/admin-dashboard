@@ -179,24 +179,31 @@ bg-gradient-to-r from-slate-900 via-slate-600 to-slate-900
                 </div>
 
                 <div class="flightMetrics layoutBorder grow-[4] flex flex-col justify-around">
+                    
                     <div class="layoutBorder">
                         <div>Inertial Velocity</div>
-                        <div class="flex justify-between items-center border-red-500 border-2 relative ">
-                            <div class=' w-[77%] h-[10px] mr-2 bg-slate-900 rounded-md absolute top-[9px] left-0 right-0 bottom-0'></div>
+                        <div class="flex justify-between items-center relative ">
                             <div id="inertialVelocity"
-                                class="  h-[10px] mr-2 bg-slate-500 rounded-md z-50">
+                                class="  h-[10px] mr-2 bg-slate-500 rounded-md z-50 ">
                             </div>
-                            
-                            <div class="layoutBorder shrink-0">10 km/s</div>
+                            <div id="inertialVelocityDigits" 
+                            class="layoutBorder shrink-0">km/s</div>
                         </div>
                     </div>
+
                     <div class="layoutBorder">
                         <div>Altitude</div>
-                        <div class="flex justify-between">
-                            <div>RangeBar</div>
-                            <div>390 km</div>
+                        <div class="flex justify-between items-center relative ">
+                            <div id="altitude"
+                                class="h-[10px] mr-2 bg-slate-500 rounded-md z-50 ">
+                            </div>
+                            <div id="altitudeDigits" 
+                            class="layoutBorder shrink-0">km</div>
                         </div>
                     </div>
+
+               
+
                     <div class="layoutBorder">
                         <div>Inclination</div>
                         <div class="flex justify-between">
@@ -204,6 +211,8 @@ bg-gradient-to-r from-slate-900 via-slate-600 to-slate-900
                             <div>51.67 deg</div>
                         </div>
                     </div>
+
+
                     <div class="layoutBorder">
                         <div>Range to Dest.</div>
                         <div class="flex justify-between">
@@ -211,6 +220,8 @@ bg-gradient-to-r from-slate-900 via-slate-600 to-slate-900
                             <div>1.02 km</div>
                         </div>
                     </div>
+
+
                 </div>
             </div>
         </div>
