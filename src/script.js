@@ -1,6 +1,5 @@
 const inertialVelocitySlider = document.querySelector('#inertialVelocity')
 
-
 /*
 Guages
 */
@@ -9,8 +8,8 @@ let
     gaugeElapsed = 0,
     allGaugeMeter = 0,
     inertialVelocity = 0,
+    intervalAmount = 50,
     intervalID
-    
 
 // random gauge values tied to gaugeMeter
 function randomGaugeFlux(input, variation) {
@@ -23,11 +22,11 @@ function randomGaugeFlux(input, variation) {
 //Initialize Guage Counter
 function gaugeEngage() {
     gaugeStart = Date.now() - gaugeElapsed
-    intervalID = setInterval(gaugeUpdate, 200)
+    intervalID = setInterval(gaugeUpdate, intervalAmount)
     let checkInterval = () => {
         setInterval(() => {
             if (allGaugeMeter >= 99) clearInterval(intervalID)
-        }, 100)
+        }, intervalAmount)
     }
     checkInterval()
 }
@@ -35,15 +34,16 @@ function gaugeEngage() {
 // increase Gauges
 function gaugeUpdate() {
     gaugeElapsed = Date.now() - gaugeStart
-    allGaugeMeter = Math.floor((gaugeElapsed / 1000) % 100)
+    allGaugeMeter = Math.floor((gaugeElapsed / intervalAmount) % 100)
 
-    inertialVelocity = randomGaugeFlux(allGaugeMeter, 2)
+    inertialVelocity = randomGaugeFlux(allGaugeMeter, 1)
     inertialVelocitySlider.style.width = `${inertialVelocity}%`
 
     console.log("gaugeMeter:", allGaugeMeter, "velocity:", inertialVelocity)
 }
 
 gaugeEngage()
+
 
 
 
@@ -67,3 +67,6 @@ addEventListener('click', () => {
     inertialVelocitySlider.style.width = '60%'
     console.log('click')
 })
+
+
+
