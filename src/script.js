@@ -14,8 +14,6 @@ let
     timeCurrent = 0,
     timeIntervalID
 
-
-
 /*
 Velocity
 */
@@ -23,7 +21,6 @@ let
     velocity = 0,
     velocityStart = 0,
     velocityIntervalID
-
 
 function increaseVelocity() {
     velocityStart = Date.now() - timeElapsed
@@ -33,7 +30,7 @@ function increaseVelocity() {
         velocity = Math.floor(((Date.now() - velocityStart) / 500))
 
         let variableVelocity = randomizeFlux(velocity, 1)
-        velocitySlider.style.width = variableVelocity + '%'
+        velocitySlider.style.width = `${variableVelocity}%`
         velocityText.textContent = `${capVelocityText(variableVelocity)} km/s`
         console.log({velocity});
 
@@ -44,14 +41,33 @@ function increaseVelocity() {
         let velocityDigits = velocity / 10
         return (velocityDigits < 10 ? velocityDigits : 10)
     }
-
 }
 
 
-function UpdateInertialVelocityDisplay(velocity) {
-    let speed = (velocity / 10)
-    if (speed >= 10) return 10
-    else return speed
+/*
+Altitude
+*/
+let
+    altitude = 0,
+    altitudeStart = 0,
+    AltitudeIntervalID
+
+
+function increaseAltitude(){
+    altitudeStart = Date.now() - timeElapsed
+    velocityAltitudeID = setInterval(updateAltitude, 100)
+
+    function updateAltitude(){
+        altitude = Math.floor(((Date.now() - altitudeStart) / 1600))
+        altitudeSlider.style.width = `${altitude}%`
+        altitudeText.textContent = `${capAltitudeText(altitude)} km`
+        console.log({altitude});
+    }
+
+    function capAltitudeText(altitude){
+        let altitudeDigits = altitude / 10
+        return (altitudeDigits < 1600? altitudeDigits : 1600)
+    }
 }
 
 
@@ -68,8 +84,8 @@ function randomizeFlux(input, variation) {
 
 
 
-// Constant Timer
-function startTimer() {
+// Constant Timers Start
+function startTimers() {
     timeStart = Date.now() - timeElapsed
     timeIntervalID = setInterval(updateTimer, 1000)
 
@@ -78,6 +94,7 @@ function startTimer() {
     }
 
     increaseVelocity()
+    increaseAltitude()
 
 }
 
@@ -87,7 +104,7 @@ function startTimer() {
 
 
 
-startTimer()
+startTimers()
 
 
 
