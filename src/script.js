@@ -4,6 +4,9 @@ const velocityText = document.querySelector('#inertialVelocityDigits')
 const altitudeSlider = document.querySelector('#altitude')
 const altitudeText = document.querySelector('#altitudeDigits')
 
+const inclinationSlider = document.querySelector('#inclination')
+const inclinationText = document.querySelector('#inclinationDigits')
+
 
 /*
 Time
@@ -32,7 +35,7 @@ function increaseVelocity() {
         let variableVelocity = randomizeFlux(velocity, 1)
         velocitySlider.style.width = `${variableVelocity}%`
         velocityText.textContent = `${capVelocityText(variableVelocity)} km/s`
-        console.log({velocity});
+        console.log({ velocity });
 
         if (variableVelocity >= 100) clearInterval(velocityIntervalID)
     }
@@ -50,24 +53,54 @@ Altitude
 let
     altitude = 0,
     altitudeStart = 0,
-    AltitudeIntervalID
+    altitudeIntervalID
 
 
-function increaseAltitude(){
+function increaseAltitude() {
     altitudeStart = Date.now() - timeElapsed
-    velocityAltitudeID = setInterval(updateAltitude, 100)
+    altitudeIntervalID = setInterval(updateAltitude, 100)
 
-    function updateAltitude(){
-        altitude = Math.floor(((Date.now() - altitudeStart) / 1600))
-        altitudeSlider.style.width = `${altitude}%`
+    function updateAltitude() {
+        altitude = Math.floor(((Date.now() - altitudeStart) / 500))
+        altitudeSlider.style.width = `${(altitude / 410) * 100}%`
         altitudeText.textContent = `${capAltitudeText(altitude)} km`
-        console.log({altitude});
+        console.log({ altitude });
+
+        if (altitude >= 410) clearInterval(altitudeIntervalID)
+
     }
 
-    function capAltitudeText(altitude){
+    function capAltitudeText(altitude) {
         let altitudeDigits = altitude / 10
-        return (altitudeDigits < 1600? altitudeDigits : 1600)
+        return (altitudeDigits < 410 ? altitudeDigits : 410)
     }
+}
+
+
+
+
+/*
+Inclination
+*/
+
+let
+    inclination = 0,
+    inclinationIntervalID
+
+function increaseInclination() {
+    inclinationIntervalID = setInterval(updateInclination, 200)
+
+    function updateInclination() {
+        if (inclination > 55) inclination--
+        else if (inclination > 49) inclination = randomizeFlux(inclination, 1.5)
+        else inclination += 2.1
+
+        inclinationSlider.style.width = `${inclination}%`
+        inclinationText.textContent = `${inclination.toFixed(1)} °`
+
+        console.log({ inclination });
+    }
+
 }
 
 
@@ -95,6 +128,7 @@ function startTimers() {
 
     increaseVelocity()
     increaseAltitude()
+    increaseInclination()
 
 }
 
