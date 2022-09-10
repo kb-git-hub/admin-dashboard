@@ -21,28 +21,33 @@ Velocity
 */
 let
     velocity = 0,
+    velocityStart = 0,
     velocityMeter = 0,
-    velocityID
+    velocityIntervalID
 
 
 function increaseVelocity() {
-    velocityID = setInterval(updateVelocity, 1000)
+    velocityStart = Date.now() - timeElapsed
+    velocityIntervalID = setInterval(updateVelocity, 100)
+    
 
+  
     function updateVelocity() {
-        velocity = timeElapsed * 5
-        console.log('velocity:', velocity);
-        // velocityMeter = velocity/1000
-        // console.log('velocity meter:', velocityMeter)
+        velocity = Date.now() - velocityStart
+        velocityMeter = Math.floor((velocity/100))
+        
+       
       
 
-        let variableVelocity = randomizeFlux(velocity, 1)
+        let variableVelocity = randomizeFlux(velocityMeter, 1)
         velocitySlider.style.width = variableVelocity + '%'
         velocityText.textContent = `${capVelocityText(variableVelocity)} km/s`
+        console.log({variableVelocity});
     }
 
     function capVelocityText(velocity){
-        if (velocity < 10) return velocity.toFixed(1)
-        else return 10
+        let velocityDigits = velocity / 10
+        return (velocityDigits < 10 ? velocityDigits : 10)
     }
 
 
@@ -81,8 +86,7 @@ function startTimer() {
     timeIntervalID = setInterval(updateTimer, 1000)
 
     function updateTimer() { 
-        timeElapsed = Math.floor((Date.now() - timeStart) / 1000) 
-        console.log('timeElapsed:', timeElapsed);    
+        timeElapsed = Math.floor((Date.now() - timeStart) / 1000)   
     }
 
     increaseVelocity()
