@@ -7,6 +7,9 @@ const altitudeText = document.querySelector('#altitudeDigits')
 const inclinationSlider = document.querySelector('#inclination')
 const inclinationText = document.querySelector('#inclinationDigits')
 
+const rangeSlider = document.querySelector('#range')
+const rangeText = document.querySelector('#rangeDigits')
+
 
 /*
 Time
@@ -14,7 +17,6 @@ Time
 let
     timeStart = 0,
     timeElapsed = 0,
-    timeCurrent = 0,
     timeIntervalID
 
 /*
@@ -35,7 +37,6 @@ function increaseVelocity() {
         let variableVelocity = randomizeFlux(velocity, 1)
         velocitySlider.style.width = `${variableVelocity}%`
         velocityText.textContent = `${capVelocityText(variableVelocity)} km/s`
-        console.log({ velocity });
 
         if (variableVelocity >= 100) clearInterval(velocityIntervalID)
     }
@@ -61,22 +62,20 @@ function increaseAltitude() {
     altitudeIntervalID = setInterval(updateAltitude, 100)
 
     function updateAltitude() {
-        altitude = Math.floor(((Date.now() - altitudeStart) / 500))
+        altitude = Math.floor(((Date.now() - altitudeStart) / 600))
         altitudeSlider.style.width = `${(altitude / 410) * 100}%`
         altitudeText.textContent = `${capAltitudeText(altitude)} km`
-        console.log({ altitude });
+
 
         if (altitude >= 410) clearInterval(altitudeIntervalID)
 
     }
 
     function capAltitudeText(altitude) {
-        let altitudeDigits = altitude / 10
-        return (altitudeDigits < 410 ? altitudeDigits : 410)
+        let altitudeDigits = altitude * 1.035
+        return (altitudeDigits < 410 ? altitudeDigits.toFixed(1) : 410)
     }
 }
-
-
 
 
 /*
@@ -97,10 +96,37 @@ function increaseInclination() {
 
         inclinationSlider.style.width = `${inclination}%`
         inclinationText.textContent = `${inclination.toFixed(1)} °`
-
-        console.log({ inclination });
     }
+}
 
+
+/*
+Range
+*/
+
+let
+    range = 408,
+    remainingRange = 0,
+    rangeIntervalID
+
+function decreaseRange() {
+    rangeIntervalID = setInterval(updateRange, 100)
+    function updateRange() {
+        remainingRange = (range - timeElapsed)
+
+        let percentage = Math.floor(((range - remainingRange)/range)*100)
+
+        rangeSlider.style.width = `${percentage}%`
+        rangeText.textContent = `${capRangeText(remainingRange)}`
+        console.log(percentage);
+
+        if (remainingRange <= 0) clearInterval(rangeIntervalID)
+    }
+    
+    function capRangeText(range) {
+        let rangeDigits = range * 1.035
+        return (rangeDigits >=0 ? `${rangeDigits.toFixed(1)} km` : 'Arrived')
+    }
 }
 
 
@@ -129,6 +155,7 @@ function startTimers() {
     increaseVelocity()
     increaseAltitude()
     increaseInclination()
+    decreaseRange()
 
 }
 
