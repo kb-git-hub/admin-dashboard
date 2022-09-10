@@ -26,3 +26,16 @@ body{
         @apply h-fit m-2 p-2 rounded-md text-sm;
     }
 }
+
+@layer components {
+    .mainContentCards {
+        cursor: pointer;
+        @apply rounded-lg
+        bg-slate-900
+        shadow-xl
+        ease-in-out duration-500
+        hover:bg-gradient-to-r from-blue-500 to-purple-500 
+        hover:shadow-xl
+        hover:scale-105
+    }
+}
