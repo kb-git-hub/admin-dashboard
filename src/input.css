@@ -78,7 +78,7 @@ body {
 @layer components { 
     .flightSliders {
         @apply h-[10px] rounded-md  
-        bg-gradient-to-r from-orange-600 via-yellow-500 to-yellow-200
+        bg-gradient-to-r from-red-500 to-rose-600    
         
     }
 }
