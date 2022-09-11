@@ -58,3 +58,13 @@ body {
         @apply text-end grow mr-3 text-slate-500 hover:text-white
     }
 }
+
+
+@layer components { 
+    .flightSliders {
+        @apply h-[10px] rounded-md  
+        bg-gradient-to-r from-orange-600 via-yellow-500 to-yellow-200
+    }
+}
+
+
