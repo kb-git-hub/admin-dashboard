@@ -89,14 +89,14 @@ body {
         
         rounded-lg 
         shadow-lg 
-       bg-gradient-to-r from-orange-600 to-amber-500
+       bg-gradient-to-r from-red-600 to-rose-600
       
        
         ease-in-out duration-500 
      
         hover:drop-shadow-2xl 
         hover:scale-105
-        hover:shadow-orange-600
+        hover:shadow-rose-600
         hover:text-white 
         flex items-end p-2 text-slate-700
     }
