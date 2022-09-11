@@ -10,6 +10,12 @@ const inclinationText = document.querySelector('#inclinationDigits')
 const rangeSlider = document.querySelector('#range')
 const rangeText = document.querySelector('#rangeDigits')
 
+const cabinSlider = document.querySelector('#cabin')
+const cabinText = document.querySelector('#rangeDigits')
+
+
+
+cabinSlider.style.width
 
 /*
 Time

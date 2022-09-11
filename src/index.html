@@ -126,36 +126,33 @@ bg-gradient-to-r from-slate-900 via-cyan-500 to-slate-900
 
             <div class="progressUpdates  row-span-3 
             flex justify-around items-center">
-                <div class="layoutBorder flex items-center justify-center h-[160px] w-[160px]">
-                    <div class="border-emerald-500 border-2 rounded-full 
-                    h-32 w-32 flex flex-col justify-center items-center">
-                        <div>PP02</div>
-                        <div>2.69</div>
-                        <div>psia</div>
+                <div class="cabinOutline">
+                    <div id="cabin" class="cabinDial">
+                        <div class="text-xs">CABIN TEMP</div>
+                        <div id="cabinDigits" class="py-3 text-2xl">2.69</div>
+                        <div class="text-xs">°C</div>
                     </div>
                 </div>
 
-                <div class="layoutBorder flex items-center justify-center h-[160px] w-[160px]">
-                    <div class="border-emerald-500 border-2 rounded-full 
-                    h-32 w-32 flex flex-col justify-center items-center">
-                        <div>PP02</div>
-                        <div>2.69</div>
-                        <div>psia</div>
+                <div class="cabinOutline">
+                    <div class="cabinDial">
+                        <div class="text-xs">CABIN PRESSURE</div>
+                        <div class="py-2 text-2xl">14.00</div>
+                        <div class="text-xs">psia</div>
                     </div>
                 </div>
 
-                <div class="layoutBorder flex items-center justify-center h-[160px] w-[160px]">
-                    <div class="border-emerald-500 border-2 rounded-full 
-                    h-32 w-32 flex flex-col justify-center items-center">
-                        <div>PP02</div>
-                        <div>2.69</div>
-                        <div>psia</div>
+                <div class="cabinOutline">
+                    <div class="cabinDial">
+                        <div class="text-xs">C02</div>
+                        <div class="py-2 text-2xl">0.07</div>
+                        <div class="text-xs">mmHg</div>
                     </div>
                 </div>
             </div>
         </div>
 
-        <div class="dashRightContent bg-opacity-50 grid grid-rows-main bg-slate-900 rounded-r-xl">
+        <div class="dashRightContent bg-opacity-50 grid grid-rows-main bg-slate-900 opacity-90 rounded-r-xl">
             <div class="user row-span-1 flex items-center justify-between">
 
                 <div class=" ml-4 flex justify-around items-center gap-2">
