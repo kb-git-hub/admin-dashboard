@@ -33,49 +33,51 @@ bg-gradient-to-r from-slate-900 via-slate-600 to-slate-900
     row-start-2 row-end-3
     w-[75vw] h-[80vh] min-h-[745px] min-w-[1240px]
     grid grid-cols-contentContainer
-    layoutBorder
+    
+    rounded-xl
+    bg-slate-600
     ">
-        <div class="dashLeftLinks layoutBorder
+        <div class="dashLeftLinks 
         grid grid-rows-6
         ">
-            <div class="logo layoutBorder row-span-1 flex items-center justify-center ">
+            <div class="logo  row-span-1 flex items-center justify-center ">
                 <img class="object-scale-down h-[5.5rem] mr-4" src="/static/x2.png">
                 <div class="mt-10"></div>
 
             </div>
 
-            <div class="main  layoutBorder row-span-2 flex flex-col justify-evenly">
-                <div class="dashboard flex">
-                    <div class="layoutBorder text-end grow mr-4 ml-4">Dashboard</div>
-                    <span class="material-symbols-outlined layoutBorder justify-self-end mr-4">
+            <div class="main   row-span-2 flex flex-col justify-evenly">
+                
+                <div class="leftSelect">    
+                    <div class=" text-end grow mr-3 ">Dashboard</div>
+                    <span class="material-symbols-outlined  justify-self-end mr-4 text-cyan-500">
                         dashboard </span>
-
                 </div>
 
-                <div class="dashboard flex">
-                    <div class="layoutBorder  text-end grow mr-4 ml-4">Profile</div>
-                    <span class="material-symbols-outlined layoutBorder justify-self-end mr-4">
+                <div class="leftSelect">
+                    <div class=" text-end grow mr-3  ">Profile</div>
+                    <span class="material-symbols-outlined  justify-self-end mr-4 text-cyan-500">
                         person
                         </span>
                 </div>
 
-                <div class="dashboard flex">
-                    <div class="layoutBorder  text-end grow mr-4 ml-4">Messages</div>
-                    <span class="material-symbols-outlined layoutBorder justify-self-end mr-4">mail</span>
+                <div class="leftSelect">
+                    <div class=" text-end grow mr-3  ">Messages</div>
+                    <span class="material-symbols-outlined justify-self-end mr-4 text-cyan-500">mail</span>
 
                 </div>
 
-                <div class="dashboard flex">
-                    <div class="layoutBorder  text-end grow mr-4 ml-4">Flight Duties</div>
+                <div class="leftSelect">
+                    <div class=" text-end grow mr-3  ">Flight Duties</div>
         
-                    <span class="material-symbols-outlined layoutBorder justify-self-end mr-4">
+                    <span class="material-symbols-outlined justify-self-end mr-4 text-cyan-500">
                         work
                         </span>
                 </div>
 
-                <div class="dashboard flex">
-                    <div class="layoutBorder  text-end grow mr-4 ml-4">Organization</div>
-                    <span class="material-symbols-outlined layoutBorder justify-self-end mr-4">
+                <div class="leftSelect">
+                    <div class=" text-end grow mr-3  ">Organization</div>
+                    <span class="material-symbols-outlined justify-self-end mr-4 text-cyan-500">
                         corporate_fare
                         </span>
                     
@@ -102,18 +104,12 @@ bg-gradient-to-r from-slate-900 via-slate-600 to-slate-900
             <div class="flightContentMain row-span-4
             grid grid-cols-3 grid-rows-2 gap-4  m-4
             ">
-                <div class="overview mainContentCards
-                
-                
-
-                
-                
-                ">Overview</div>
-                <div class="life mainContentCards ">Life</div>
-                <div class="comms mainContentCards ">Comms</div>
-                <div class="prop mainContentCards ">Prop</div>
-                <div class="mech mainContentCards ">Mech</div>
-                <div class="power mainContentCards ">Power</div>
+                <div class="overview mainContent">Overview</div>
+                <div class="life mainContent ">Life</div>
+                <div class="comms mainContent ">Comms</div>
+                <div class="prop mainContent ">Prop</div>
+                <div class="mech mainContent ">Mech</div>
+                <div class="power mainContent ">Power</div>
             </div>
 
             <div class="progressUpdates layoutBorder row-span-3 

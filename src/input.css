@@ -5,13 +5,13 @@
 
 
 
-*{
-    font-family: 'Roboto', sans-serif;  
+* {
+    font-family: 'Roboto', sans-serif;
     color: whitesmoke;
 }
 
-body{
-    -webkit-font-smoothing: antialiased ;
+body {
+    -webkit-font-smoothing: antialiased;
 }
 
 
@@ -28,14 +28,26 @@ body{
 }
 
 @layer components {
-    .mainContentCards {
+    .mainContent {
         cursor: pointer;
-        @apply rounded-lg
-        bg-slate-900
-        shadow-xl
-        ease-in-out duration-500
-        hover:bg-gradient-to-r from-blue-500 to-purple-500 
-        hover:shadow-xl
+        @apply rounded-lg bg-slate-900 shadow-lg ease-in-out duration-500 
+        
+        hover:bg-gradient-to-r from-cyan-500 to-purple-500
+        hover:drop-shadow-2xl 
         hover:scale-105
+        hover:shadow-cyan-500
+        hover:text-white 
+        flex items-end p-2 text-slate-500
+    }
+}
+
+
+@layer components {
+    .leftSelect {
+        cursor: pointer;
+        @apply flex mx-4 hover:bg-slate-500
+        hover:shadow-2xl
+        hover:scale-105
+        ease-in-out duration-300
     }
 }

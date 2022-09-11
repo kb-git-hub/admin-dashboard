@@ -125,7 +125,7 @@ function decreaseRange() {
     
     function capRangeText(range) {
         let rangeDigits = range * 1.035
-        return (rangeDigits >=0 ? `${rangeDigits.toFixed(1)} km` : 'Arrived')
+        return (rangeDigits >=1 ? `${rangeDigits.toFixed(1)} km` : 'Arrived')
     }
 }
 
@@ -156,13 +156,7 @@ function startTimers() {
     increaseAltitude()
     increaseInclination()
     decreaseRange()
-
 }
-
-
-
-
-
 
 
 startTimers()
