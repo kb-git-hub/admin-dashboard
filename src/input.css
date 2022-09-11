@@ -23,9 +23,23 @@ body {
 
 @layer components {
     .itineraryCards {
-        @apply h-fit m-2 p-2 rounded-md text-sm;
+        @apply h-fit m-2   text-sm 
     }
 }
+
+@layer components {
+    .itineraryCardText {
+        @apply text-slate-500 border-t-2 border-slate-700 
+    }
+}
+
+@layer components {
+    .itineraryCardDivider {
+        @apply border-l-2 border-slate-700 grow-0 h-[50px] place-self-center
+    }
+}
+
+
 
 @layer components {
     .mainContent {

@@ -176,41 +176,66 @@ bg-gradient-to-r from-slate-900 via-slate-600 to-slate-900
             m-3 rounded-lg
             ">
                 <div class="flightNumber h-14 ml-3 ">
-                    <div>Flight Number</div>
-                    <div>D96024</div>
+                    <div class= "text-slate-500 pt-2 pl-2">Flight Number</div>
+                    <div class="pl-2" >D96024</div>
                 </div>
-                <div class="flightItinerary  grow
-                grid grid-cols-2
+                <div class="flightItinerary  grow grid grid-cols-1
                 ">
-                    <div class="layoutBorder itineraryCards">
-                        <div>Launch Loc</div>
-                        <div class=" mt-1">Earth</div>
+
+                <div class="flex justify-between">
+                    <div class=" itineraryCards ">
+                        <div class="itineraryCardText w-[130px] pl-2 ">Launch Loc</div>
+                        <div class=" mt-1 pl-2">Earth</div>
                     </div>
-                    <div class="layoutBorder itineraryCards">
-                        <div>Dest Loc</div>
-                        <div class=" mt-1">ISS</div>
+
+                    <div class="itineraryCardDivider"></div>
+
+                    <div class=" itineraryCards grow">
+                        <div class="itineraryCardText pl-2">Dest Loc</div>
+                        <div class=" mt-1 pl-2">ISS</div>
                     </div>
-                    <div class="layoutBorder itineraryCards">
-                        <div>Launch Date</div>
-                        <div class=" mt-1">06-22-2340</div>
-                    </div>
-                    <div class="layoutBorder itineraryCards">
-                        <div>Landing Date</div>
-                        <div class=" mt-1">08-22-2340</div>
-                    </div>
-                    <div class="layoutBorder itineraryCards">
-                        <div>Seat</div>
-                        <div class=" mt-1">001-a-6</div>
-                    </div>
-                    <div class="layoutBorder itineraryCards">
-                        <div>Purpose</div>
-                        <div class="text-sm mt-1">Exploration</div>
-                    </div>
+
                 </div>
 
+
+                <div class="flex justify-between">
+                    <div class=" itineraryCards ">
+                        <div class="itineraryCardText w-[130px] pl-2">Launch Date</div>
+                        <div class=" mt-1 pl-2">06-22-2340</div>
+                    </div>
+
+                    <div class="itineraryCardDivider"></div>
+
+                    <div class=" itineraryCards grow">
+                        <div class="itineraryCardText pl-2">Landing Date</div>
+                        <div class=" mt-1 pl-2">08-22-2340</div>
+                    </div>
+
+                </div>
+
+                <div class="flex justify-between">
+                    <div class=" itineraryCards ">
+                        <div class="itineraryCardText w-[130px] pl-2 ">Seat</div>
+                        <div class=" mt-1z pl-2">001-a-6</div>
+                    </div>
+
+                    <div class="itineraryCardDivider"></div>
+
+                    <div class=" itineraryCards grow">
+                        <div class="itineraryCardText pl-2">Purpose</div>
+                        <div class=" mt-1 pl-2">Maintenance</div>
+                    </div>
+
+                </div>
+
+
+
+
+            
+        
                 <div class="flightMetrics grow-[4] flex flex-col justify-around px-2">
 
-                    <div class="">
+                    <div class="border-t-2 border-slate-700 pt-2">
                         <div class="text-slate-500">Inertial Velocity</div>
                         <div class="flex justify-between items-center  ">
                             <div class=" flex-grow mr-2 flex">
@@ -222,7 +247,7 @@ bg-gradient-to-r from-slate-900 via-slate-600 to-slate-900
                         </div>
                     </div>
 
-                    <div class="">
+                    <div class="border-t-2 border-slate-700 pt-2">
                         <div class="text-slate-500">Altitude</div>
                         <div class="flex justify-between items-center ">
                             <div class=" flex-grow mr-2 flex">
@@ -234,7 +259,7 @@ bg-gradient-to-r from-slate-900 via-slate-600 to-slate-900
                         </div>
                     </div>
 
-                    <div class="">
+                    <div class="border-t-2 border-slate-700 pt-2">
                         <div class="text-slate-500">Inclination</div>
                         <div class="flex justify-between items-center ">
                             <div class=" flex-grow mr-2 flex">
@@ -246,7 +271,7 @@ bg-gradient-to-r from-slate-900 via-slate-600 to-slate-900
                         </div>
                     </div>
 
-                    <div class="">
+                    <div class="border-t-2 border-slate-700 pt-2">
                         <div class="text-slate-500">Range to Dest.</div>
                         <div class="flex justify-between items-center ">
                             <div class=" flex-grow mr-2 flex">
