@@ -10,12 +10,35 @@ const inclinationText = document.querySelector('#inclinationDigits')
 const rangeSlider = document.querySelector('#range')
 const rangeText = document.querySelector('#rangeDigits')
 
-const cabinSlider = document.querySelector('#cabin')
-const cabinText = document.querySelector('#rangeDigits')
+const cabinText = document.querySelector('#cabinDigits')
+const pressureText = document.querySelector('#pressureDigits')
+const c02Text = document.querySelector('#c02Digits')
 
 
 
-cabinSlider.style.width
+
+function cabinTempMonitor() {
+    setInterval(cabinGauges, 1000)
+
+    function cabinGauges() {
+        function cabinTempUpdate() {
+            let cabinTemp = randomizeCabinGauges(2.69, 0.03)
+            cabinText.textContent = cabinTemp.toFixed(2)
+        }
+        function cabinPressureUpdate() {
+            let cabinPressure = randomizeCabinGauges(14, 1.1)
+            pressureText.textContent = cabinPressure.toFixed(2)
+        }
+        
+        function c02Update() {
+            let cabinC02 = randomizeCabinGauges(0.07, 0.021)
+            c02Text.textContent = cabinC02.toFixed(2)
+        }
+        cabinTempUpdate()
+        cabinPressureUpdate()
+        c02Update()
+    }
+}
 
 /*
 Time
@@ -120,7 +143,7 @@ function decreaseRange() {
     function updateRange() {
         remainingRange = (range - timeElapsed)
 
-        let percentage = Math.floor(((range - remainingRange)/range)*100)
+        let percentage = Math.floor(((range - remainingRange) / range) * 100)
 
         rangeSlider.style.width = `${percentage}%`
         rangeText.textContent = `${capRangeText(remainingRange)}`
@@ -128,10 +151,10 @@ function decreaseRange() {
 
         if (remainingRange <= 0) clearInterval(rangeIntervalID)
     }
-    
+
     function capRangeText(range) {
         let rangeDigits = range * 1.035
-        return (rangeDigits >=1 ? `${rangeDigits.toFixed(1)} km` : 'Arrived')
+        return (rangeDigits >= 1 ? `${rangeDigits.toFixed(1)} km` : 'Arrived')
     }
 }
 
@@ -147,6 +170,13 @@ function randomizeFlux(input, variation) {
     return rand
 }
 
+function randomizeCabinGauges(input, variation) {
+    const
+        min = input - variation,
+        max = input + variation,
+        rand = Math.random() * (max - min) + min
+    return rand
+}
 
 
 // Constant Timers Start
@@ -162,6 +192,8 @@ function startTimers() {
     increaseAltitude()
     increaseInclination()
     decreaseRange()
+
+    cabinTempMonitor()
 }
 
 
