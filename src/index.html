@@ -26,7 +26,7 @@
 
 <body class=" grid relative
 h-screen w-screen
-bg-gradient-to-r from-slate-900 via-slate-600 to-slate-900
+bg-gradient-to-r from-slate-900 via-cyan-500 to-slate-900
 ">
     <div class="contentContainer  
     col-start-2 col-end-3
@@ -34,11 +34,12 @@ bg-gradient-to-r from-slate-900 via-slate-600 to-slate-900
     w-[75vw] h-[80vh] min-h-[745px] min-w-[1240px]
     grid grid-cols-contentContainer
     
-    rounded-xl
+ 
     bg-slate-600
+    bg-opacity-20
     ">
         <div class="dashLeftLinks 
-        grid grid-rows-6 bg-slate-900 rounded-l-xl
+        grid grid-rows-6 bg-slate-900 rounded-l-xl bg-opacity-50
         ">
             <div class="logo  row-span-1 flex items-center justify-center ">
                 <img class="object-scale-down h-[5.5rem] mr-4" src="/static/x2.png">
@@ -104,14 +105,12 @@ bg-gradient-to-r from-slate-900 via-slate-600 to-slate-900
             </div>
         </div>
 
-        <div class="dashMainContent row-span-1 grid grid-rows-main layoutBorder">
-            <div class="summary layoutBorder flex items-center ">Summary</div>
-            <div class="flightLog layoutBorder 
-            flex gap-4 ml-4
-            ">
-                <div class=" p-4 flex justify-center items-center my-2 systems layoutBorder">ALL SYSTEMS CHECK</div>
-                <div class=" p-4 flex justify-center items-center my-2 thermalShield layoutBorder">THERMAL SHIELD</div>
-                <div class=" p-4 flex justify-center items-center my-2 power layoutBorder">POWER COMPLETION</div>
+        <div class="dashMainContent row-span-1 grid grid-rows-main">
+            <div class="summary  text-lg flex items-center pl-4">Summary</div>
+            <div class="flex gap-4 ml-4 justify-around">
+                <div class=" p-4 flex justify-center items-center my-2 flightLog ">ALL SYSTEMS CHECK</div>
+                <div class=" p-4 flex justify-center items-center my-2 flightLog">THERMAL SHIELD</div>
+                <div class=" p-4 flex justify-center items-center my-2 flightLog">POWER COMPLETION</div>
             </div>
 
             <div class="flightContentMain row-span-4
@@ -125,7 +124,7 @@ bg-gradient-to-r from-slate-900 via-slate-600 to-slate-900
                 <div class="power mainContent ">Power</div>
             </div>
 
-            <div class="progressUpdates layoutBorder row-span-3 
+            <div class="progressUpdates  row-span-3 
             flex justify-around items-center">
                 <div class="layoutBorder flex items-center justify-center h-[160px] w-[160px]">
                     <div class="border-emerald-500 border-2 rounded-full 
@@ -156,18 +155,21 @@ bg-gradient-to-r from-slate-900 via-slate-600 to-slate-900
             </div>
         </div>
 
-        <div class="dashRightContent grid grid-rows-main bg-slate-900 rounded-r-xl">
-            <div class="user layoutBorder row-span-1 flex items-center justify-between">
+        <div class="dashRightContent bg-opacity-50 grid grid-rows-main bg-slate-900 rounded-r-xl">
+            <div class="user row-span-1 flex items-center justify-between">
 
                 <div class=" ml-4 flex justify-around items-center gap-2">
-                    <div class="border-emerald-500 border-2 rounded-full h-14 w-14 flex justify-center items-center">
-                        <div>photo</div>
-                    </div>
-                    <div>Hopper Copper</div>
+                        <img class=" cursor-pointer rounded-full  h-14 w-14 object-cover object-top"  src="/static/profilePhoto.jpg">
+                 
+                    <div class="ml-2 cursor-pointer">Hopper Copper</div>
                 </div>
                 <div class=" mr-4 flex justify-around items-center gap-2">
-                    <div>img</div>
-                    <div>...</div>
+                    <span class="material-symbols-outlined cursor-pointer">
+                        notifications
+                        </span>
+                    <span class="material-symbols-outlined cursor-pointer">
+                        more_vert
+                        </span>
                 </div>
             </div>
 
@@ -216,7 +218,7 @@ bg-gradient-to-r from-slate-900 via-slate-600 to-slate-900
                 <div class="flex justify-between">
                     <div class=" itineraryCards ">
                         <div class="itineraryCardText w-[130px] pl-2 ">Seat</div>
-                        <div class=" mt-1z pl-2">001-a-6</div>
+                        <div class=" mt-1 pl-2">001-a-6</div>
                     </div>
 
                     <div class="itineraryCardDivider"></div>
