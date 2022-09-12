@@ -16,7 +16,7 @@ const scene = new THREE.Scene()
 const color3 = new THREE.Color("rgb(15, 23, 42)")
 // const texture = new THREE.TextureLoader().load( "/static/darkspace.png" )
 scene.background = color3
-const count = 40
+const count = 30
 const positionArray = new Float32Array(count * 9)
 for (let i = 0; i < count * 9; i++) {
     positionArray[i] = (Math.random() - 0.5) * 4
@@ -91,9 +91,9 @@ const clock = new THREE.Clock()
 const animate = () => {
     const elapsedTime = clock.getElapsedTime()
 
-    mesh.rotation.x += 0.002
-    mesh.rotation.y += 0.002
-    mesh.rotation.z += 0.002
+    mesh.rotation.x += 0.001
+    mesh.rotation.y += 0.001
+    mesh.rotation.z += 0.001
 
     // Update controls
     controls.update()
