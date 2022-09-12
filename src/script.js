@@ -15,8 +15,6 @@ const pressureText = document.querySelector('#pressureDigits')
 const c02Text = document.querySelector('#c02Digits')
 
 
-
-
 function cabinTempMonitor() {
     setInterval(cabinGauges, 1000)
 
@@ -147,7 +145,7 @@ function decreaseRange() {
 
         rangeSlider.style.width = `${percentage}%`
         rangeText.textContent = `${capRangeText(remainingRange)}`
-        console.log(percentage);
+       
 
         if (remainingRange <= 0) clearInterval(rangeIntervalID)
     }
